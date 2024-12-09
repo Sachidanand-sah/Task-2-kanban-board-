@@ -12,8 +12,8 @@ const Card: React.FC<Props> = ({ task }) => {
         padding: '1rem',
         marginBottom: '1rem',
         background: '#fff',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
+        border: '5px solid #ccc',
+        borderRadius: '15px',
       }}
     >
       {task.content}

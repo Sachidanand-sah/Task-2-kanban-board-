@@ -60,7 +60,17 @@ const KanbanBoard: React.FC = () => {
       <UndoRedoButtons onUndo={undo} onRedo={redo} canUndo={canUndo} canRedo={canRedo} />
       <AddColumnButton onAddColumn={handleAddColumn} />
       <DragDropContext onDragEnd={onDragEnd}>
-        <div style={{ display: 'flex', gap: '1rem' }}>
+      <div style={{
+    display: 'flex',
+    gap: '1rem',
+    justifyContent: 'space-between', // Ensures items are spaced nicely
+    alignItems: 'center', // Vertically aligns items
+    padding: '1rem', // Adds padding around the container
+    backgroundColor: '#f07f7f', // Light gray background for better contrast
+    border: '5px solid #fff', // Border for structure
+    borderRadius: '20px', // Rounded corners for a modern look
+  }}
+>
           {filteredColumns.map((column) => (
             <Droppable droppableId={column.id} key={column.id}>
               {(provided) => (
